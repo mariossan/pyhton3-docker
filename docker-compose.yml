@@ -1,0 +1,9 @@
+version: '3'
+services: 
+  python-docker:
+    build: .
+    restart: always
+    container_name: 'python-docker'
+    volumes:
+      - $PWD/app:/app
+    command: bash -c 'tail -f /dev/null'
